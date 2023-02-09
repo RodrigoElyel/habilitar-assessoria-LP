@@ -1,6 +1,6 @@
 const THEME = {
   COLORS: {
-    primary: "#3871C2",
+    primary: "#156E9F",
     secondary: "#403C3D",
     tertiary: "#F2F2F2",
     quaternary: "#91dce2",
