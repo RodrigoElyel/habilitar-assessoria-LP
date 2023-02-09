@@ -9,26 +9,39 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
 function Home() {
+  const CustomTagA = ({ title, section, size }) => {
+    return (
+      <Text
+        size={size ? size : THEME.SIZES.large}
+        color={THEME.COLORS.primary}
+        bold
+        align="center"
+      >
+        <a
+          href={"#" + section}
+          style={{
+            display: "block",
+            textDecoration: "none",
+            color: THEME.COLORS.primary,
+          }}
+        >
+          {title}
+        </a>
+      </Text>
+    );
+  };
   return (
     <S.Screen>
       <S.Background>
-        <S.Section1>
+        <S.Section1 id="inicio">
           <S.TopS1>
             <img className="logo" src={logo} alt="logomarca" />
 
             <S.ContainerTitlesTopS1 className="ContainerTitlesTopS1">
-              <Text size={THEME.SIZES.large} color={THEME.COLORS.primary} bold>
-                INÍCIO
-              </Text>
-              <Text size={THEME.SIZES.large} color={THEME.COLORS.primary} bold>
-                SERVIÇOS
-              </Text>
-              <Text size={THEME.SIZES.large} color={THEME.COLORS.primary} bold>
-                QUEM SOMOS
-              </Text>
-              <Text size={THEME.SIZES.large} color={THEME.COLORS.primary} bold>
-                CONTATO
-              </Text>
+              <CustomTagA title="INÍCIO" section="inicio" />
+              <CustomTagA title="SERVIÇOS" section="servicos" />
+              <CustomTagA title="QUEM SOMOS" section="" />
+              <CustomTagA title="CONTATO" section="" />
             </S.ContainerTitlesTopS1>
 
             <S.ContainerTitlesTopS1 className="menuMobile">
@@ -50,38 +63,26 @@ function Home() {
                     justifyContent: "space-around",
                   }}
                 >
-                  <Text
+                  <CustomTagA
+                    title="INÍCIO"
+                    section="inicio"
                     size={THEME.SIZES.mediuLarge}
-                    color={THEME.COLORS.primary}
-                    bold
-                    align="center"
-                  >
-                    INÍCIO
-                  </Text>
-                  <Text
+                  />
+                  <CustomTagA
+                    title="SERVIÇOS"
+                    section="servicos"
                     size={THEME.SIZES.mediuLarge}
-                    color={THEME.COLORS.primary}
-                    bold
-                    align="center"
-                  >
-                    SERVIÇOS
-                  </Text>
-                  <Text
+                  />
+                  <CustomTagA
+                    title="QUEM SOMOS"
+                    section=""
                     size={THEME.SIZES.mediuLarge}
-                    color={THEME.COLORS.primary}
-                    bold
-                    align="center"
-                  >
-                    QUEM SOMOS
-                  </Text>
-                  <Text
+                  />
+                  <CustomTagA
+                    title="CONTATO"
+                    section=""
                     size={THEME.SIZES.mediuLarge}
-                    color={THEME.COLORS.primary}
-                    bold
-                    align="center"
-                  >
-                    CONTATO
-                  </Text>
+                  />
                 </div>
               </Popup>
             </S.ContainerTitlesTopS1>
@@ -133,7 +134,7 @@ function Home() {
             </S.ContainerTitlesBottomS1>
           </S.BottomS1>
         </S.Section1>
-        <S.Section2></S.Section2>
+        <S.Section2 id="servicos"></S.Section2>
       </S.Background>
     </S.Screen>
   );

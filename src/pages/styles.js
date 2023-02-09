@@ -45,17 +45,16 @@ export const TopS1 = styled.div`
     }
   }
 
-  @media (min-width: 1000px) {
-    .menuMobile {
+  .ContainerTitlesTopS1 {
+    @media (max-width: 1000px) {
       display: none;
     }
   }
 
-  @media (max-width: 1000px) {
-    .ContainerTitlesTopS1 {
-      display: none;
-    }
-    .menuMobile {
+  .menuMobile {
+    display: none;
+    @media (max-width: 1000px) {
+      display: flex;
       justify-content: center;
       align-items: center;
     }
