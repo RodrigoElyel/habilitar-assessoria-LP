@@ -48,7 +48,7 @@ function Home() {
               </Text>
               <S.ButtonBottomS1
                 onClick={() => {
-                  console.log("Press");
+                  window.open("https://wa.me/8396106794");
                 }}
               >
                 <BsWhatsapp size={THEME.SIZES.mediuLarge} />
