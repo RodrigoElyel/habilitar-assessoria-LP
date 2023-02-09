@@ -11,7 +11,7 @@ function Home() {
       <S.Background>
         <S.Section1>
           <S.TopS1>
-            <img className="logo" src={logo} />
+            <img className="logo" src={logo} alt="logomarca" />
 
             <S.ContainerTitlesTopS1>
               <Text size={THEME.SIZES.large} color={THEME.COLORS.primary} bold>
