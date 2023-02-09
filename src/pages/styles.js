@@ -45,6 +45,22 @@ export const TopS1 = styled.div`
       margin: 40px;
     }
   }
+
+  @media (min-width: 1000px) {
+    .menuMobile {
+      display: none;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    .ContainerTitlesTopS1 {
+      display: none;
+    }
+    .menuMobile {
+      justify-content: center;
+      align-items: center;
+    }
+  }
 `;
 
 export const BottomS1 = styled.div`
@@ -75,6 +91,14 @@ export const ContainerTitlesBottomS1 = styled.div`
   width: 40%;
   height: 80%;
   justify-content: space-evenly;
+
+  @media (max-width: 1000px) {
+    width: 85%;
+
+    .titleTop {
+      font-size: ${THEME.SIZES.extraLarge}px;
+    }
+  }
 `;
 
 export const ButtonBottomS1 = styled.button`
@@ -94,6 +118,9 @@ export const ButtonBottomS1 = styled.button`
   :hover {
     background-color: transparent;
     border: 2px solid ${THEME.COLORS.success};
+  }
+  @media (max-width: 1000px) {
+    width: 80%;
   }
 `;
 

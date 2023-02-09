@@ -4,6 +4,7 @@ import Text from "../components/Text";
 import logo from "../assets/logoHA.png";
 import THEME from "../styles";
 import { BsWhatsapp } from "react-icons/bs";
+import { FiMenu } from "react-icons/fi";
 
 function Home() {
   return (
@@ -13,7 +14,7 @@ function Home() {
           <S.TopS1>
             <img className="logo" src={logo} alt="logomarca" />
 
-            <S.ContainerTitlesTopS1>
+            <S.ContainerTitlesTopS1 className="ContainerTitlesTopS1">
               <Text size={THEME.SIZES.large} color={THEME.COLORS.primary} bold>
                 INÍCIO
               </Text>
@@ -27,10 +28,15 @@ function Home() {
                 CONTATO
               </Text>
             </S.ContainerTitlesTopS1>
+
+            <S.ContainerTitlesTopS1 className="menuMobile">
+              <FiMenu size={THEME.SIZES.extraLarge} />
+            </S.ContainerTitlesTopS1>
           </S.TopS1>
           <S.BottomS1>
             <S.ContainerTitlesBottomS1>
               <Text
+                className="titleTop"
                 size={THEME.SIZES.extraLarge + 18}
                 color={THEME.COLORS.black}
                 bold
