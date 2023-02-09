@@ -109,7 +109,7 @@ function Home() {
 
               <S.ButtonBottomS1
                 onClick={() => {
-                  window.open("https://wa.me/558396106794");
+                  window.open("https://wa.me/5598981778773");
                 }}
               >
                 <BsWhatsapp

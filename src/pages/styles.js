@@ -40,8 +40,7 @@ export const TopS1 = styled.div`
     transition: all 1s;
 
     :hover {
-      width: 100px;
-      margin: 40px;
+      transform: scale(0.9);
     }
   }
 
@@ -89,6 +88,17 @@ export const ContainerTitlesBottomS1 = styled.div`
   width: 40%;
   height: 80%;
   justify-content: space-evenly;
+  animation: leftToRight 1s ease-in;
+  animation-delay: 0ms;
+
+  @keyframes leftToRight {
+    from {
+      transform: translateX(-500px);
+    }
+    to {
+      transform: translateX(0px);
+    }
+  }
 
   @media (max-width: 1000px) {
     width: 85%;
