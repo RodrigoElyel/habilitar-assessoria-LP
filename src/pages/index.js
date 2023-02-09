@@ -54,10 +54,13 @@ function Home() {
               </Text>
               <S.ButtonBottomS1
                 onClick={() => {
-                  window.open("https://wa.me/8396106794");
+                  window.open("https://wa.me/558396106794");
                 }}
               >
-                <BsWhatsapp size={THEME.SIZES.mediuLarge} />
+                <BsWhatsapp
+                  size={THEME.SIZES.mediuLarge}
+                  color={THEME.COLORS.black}
+                />
                 <Text
                   size={THEME.SIZES.mediuLarge}
                   color={THEME.COLORS.black}

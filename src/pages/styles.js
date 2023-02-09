@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import THEME from "../styles";
-import Predio from "../assets/predio.jpg";
 
 export const Screen = styled.div`
   width: 100vw;
@@ -10,7 +9,7 @@ export const Screen = styled.div`
 
 export const Background = styled.div`
   height: 100vh;
-  background-image: url(${Predio});
+  background-image: url("https://images.pexels.com/photos/2174719/pexels-photo-2174719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
