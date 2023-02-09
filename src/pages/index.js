@@ -5,6 +5,8 @@ import logo from "../assets/logoHA.png";
 import THEME from "../styles";
 import { BsWhatsapp } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 
 function Home() {
   return (
@@ -30,7 +32,58 @@ function Home() {
             </S.ContainerTitlesTopS1>
 
             <S.ContainerTitlesTopS1 className="menuMobile">
-              <FiMenu size={THEME.SIZES.extraLarge} />
+              <Popup
+                trigger={
+                  <button style={{ border: "none" }}>
+                    <FiMenu size={THEME.SIZES.extraLarge} />
+                  </button>
+                }
+                position="bottom right"
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    width: 200,
+                    height: 200,
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "space-around",
+                  }}
+                >
+                  <Text
+                    size={THEME.SIZES.mediuLarge}
+                    color={THEME.COLORS.primary}
+                    bold
+                    align="center"
+                  >
+                    INÍCIO
+                  </Text>
+                  <Text
+                    size={THEME.SIZES.mediuLarge}
+                    color={THEME.COLORS.primary}
+                    bold
+                    align="center"
+                  >
+                    SERVIÇOS
+                  </Text>
+                  <Text
+                    size={THEME.SIZES.mediuLarge}
+                    color={THEME.COLORS.primary}
+                    bold
+                    align="center"
+                  >
+                    QUEM SOMOS
+                  </Text>
+                  <Text
+                    size={THEME.SIZES.mediuLarge}
+                    color={THEME.COLORS.primary}
+                    bold
+                    align="center"
+                  >
+                    CONTATO
+                  </Text>
+                </div>
+              </Popup>
             </S.ContainerTitlesTopS1>
           </S.TopS1>
           <S.BottomS1>
@@ -52,6 +105,7 @@ function Home() {
                 Há mais de 15 anos atuando em defesas das empresas para garantir
                 a contratação com o Poder Público.
               </Text>
+
               <S.ButtonBottomS1
                 onClick={() => {
                   window.open("https://wa.me/558396106794");
