@@ -179,7 +179,13 @@ export const Quadros = styled.div`
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
 
-  .logoCard {
+  @media (max-width: 1000px) {
+    width: 85%;
+    height: 15%;
+    margin: 24px 0px;
+  }
+
+  /* .logoCard {
     width: 80px;
     height: 80px;
     transition: all 2s;
@@ -188,12 +194,38 @@ export const Quadros = styled.div`
       cursor: pointer;
       transform: scale(1.4);
     }
+  } */
+
+  .ContainerTitleCard {
+    display: flex;
+    width: 60%;
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+
+    @media (max-width: 1000px) {
+      width: 95%;
+    }
   }
 
-  @media (max-width: 1000px) {
-    width: 85%;
-    height: 40%;
-    margin: 24px 0px;
+  .titleCard {
+    width: 100%;
+    background-color: ${THEME.COLORS.black};
+    border-radius: 12px;
+    padding: 4;
+    box-shadow: 5px 5px 15px black;
+
+    @media (max-width: 1000px) {
+      font-size: ${THEME.SIZES.medium}px;
+    }
+  }
+
+  .subTitleCard {
+    width: 100%;
+
+    @media (max-width: 1000px) {
+      font-size: ${THEME.SIZES.smallMedium}px;
+    }
   }
 `;
 

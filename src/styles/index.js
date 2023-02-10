@@ -18,7 +18,7 @@ const THEME = {
   SIZES: {
     extraLarge: 32,
     large: 24,
-    mediuLarge: 20,
+    mediumLarge: 20,
     medium: 16,
     smallMedium: 12,
     small: 8,

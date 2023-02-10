@@ -14,24 +14,10 @@ function Home() {
   const CustomCard = ({ title, subtitle }) => {
     return (
       <S.Quadros>
-        <div
-          style={{
-            display: "flex",
-            width: "60%",
-            height: "100%",
-            justifyContent: "space-around",
-            flexDirection: "column",
-          }}
-        >
+        <div className="ContainerTitleCard">
           <Text
-            style={{
-              width: "100%",
-              backgroundColor: THEME.COLORS.black,
-              borderRadius: 12,
-              padding: 4,
-              boxShadow: "5px 5px 15px black",
-            }}
-            size={THEME.SIZES.mediuLarge}
+            className="titleCard"
+            size={THEME.SIZES.large}
             color={THEME.COLORS.primary}
             align="center"
             bold
@@ -40,8 +26,8 @@ function Home() {
           </Text>
 
           <Text
-            style={{ width: "100%" }}
-            size={THEME.SIZES.smallMedium}
+            className="subTitleCard"
+            size={THEME.SIZES.medium}
             color={THEME.COLORS.white}
             align="center"
           >
@@ -110,22 +96,22 @@ function Home() {
                   <CustomTagA
                     title="INÍCIO"
                     section="inicio"
-                    size={THEME.SIZES.mediuLarge}
+                    size={THEME.SIZES.mediumLarge}
                   />
                   <CustomTagA
                     title="SERVIÇOS"
                     section="servicos"
-                    size={THEME.SIZES.mediuLarge}
+                    size={THEME.SIZES.mediumLarge}
                   />
                   <CustomTagA
                     title="QUEM SOMOS"
                     section=""
-                    size={THEME.SIZES.mediuLarge}
+                    size={THEME.SIZES.mediumLarge}
                   />
                   <CustomTagA
                     title="CONTATO"
                     section=""
-                    size={THEME.SIZES.mediuLarge}
+                    size={THEME.SIZES.mediumLarge}
                   />
                 </div>
               </Popup>
@@ -157,11 +143,11 @@ function Home() {
                 }}
               >
                 <BsWhatsapp
-                  size={THEME.SIZES.mediuLarge}
+                  size={THEME.SIZES.mediumLarge}
                   color={THEME.COLORS.white}
                 />
                 <Text
-                  size={THEME.SIZES.mediuLarge}
+                  size={THEME.SIZES.mediumLarge}
                   color={THEME.COLORS.white}
                   align="center"
                 >
@@ -169,7 +155,7 @@ function Home() {
                 </Text>
               </S.ButtonBottomS1>
               <Text
-                size={THEME.SIZES.mediuLarge}
+                size={THEME.SIZES.mediumLarge}
                 color={THEME.COLORS.white}
                 align="center"
               >
@@ -201,7 +187,7 @@ function Home() {
 
       <S.Section4 id="contato">
         <Text
-          size={THEME.SIZES.mediuLarge}
+          size={THEME.SIZES.mediumLarge}
           color={THEME.COLORS.white}
           align="center"
           style={{ width: "40%" }}
