@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import THEME from "../styles";
-import waves from "../assets/svg.png";
 
 export const Screen = styled.div`
   width: 100vw;
@@ -9,9 +8,9 @@ export const Screen = styled.div`
 `;
 
 export const Background = styled.div`
+  width: 100vw;
   height: 100vh;
   background-image: url("https://img.freepik.com/fotos-gratis/empresarios-em-reuniao-de-diretoria_53876-138090.jpg?w=2000&t=st=1675967956~exp=1675968556~hmac=b7586b65c91d9e79a32b6ec4489c64e243e3148cea024994cd3455bfc5e06d68");
-  /* background-image: url("https://images.pexels.com/photos/2174719/pexels-photo-2174719.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); */
   background-attachment: fixed;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -21,6 +20,7 @@ export const Background = styled.div`
 // =========================== Section1 ===========================
 
 export const Section1 = styled.div`
+  width: 100vw;
   height: 100vh;
   background-color: ${THEME.COLORS.black};
   opacity: 0.9;
@@ -139,13 +139,14 @@ export const ButtonBottomS1 = styled.button`
 // =========================== Section2 ===========================
 export const Section2 = styled.div`
   display: flex;
+  width: 100vw;
+  height: 80vh;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  height: 80vh;
   padding: 48px;
-  background-color: #156e9f;
+  background-color: ${THEME.COLORS.black};
   background-image: radial-gradient(
       at 47% 33%,
       hsl(0, 0%, 0%) 0,
@@ -171,13 +172,12 @@ export const Quadros = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  box-shadow: 5px 5px 15px black;
 
-  backdrop-filter: blur(8px) saturate(188%);
-  -webkit-backdrop-filter: blur(8px) saturate(188%);
-  background-color: rgba(255, 255, 255, 0.31);
+  backdrop-filter: blur(16px) saturate(200%);
+  -webkit-backdrop-filter: blur(16px) saturate(200%);
+  background-color: rgba(21, 110, 159, 0.52);
   border-radius: 12px;
-  border: 1px solid rgba(209, 213, 219, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.125);
 
   @media (max-width: 1000px) {
     width: 85%;
@@ -232,17 +232,81 @@ export const Quadros = styled.div`
 // ================================================================
 
 // =========================== Section4 ===========================
-export const Section4 = styled.div`
-  height: 35vh;
-  background-image: url(${waves});
-  /* background-attachment: fixed; */
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
+export const Section3 = styled.div`
+  display: flex;
+  width: 100vw;
+  height: 120vh;
+  background-color: ${THEME.COLORS.black};
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+`;
 
+// ================================================================
+
+// =========================== Section4 ===========================
+export const Section4 = styled.div`
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 24px;
+  background-color: ${THEME.COLORS.black};
+`;
+
+export const ContainerTitleSection04 = styled.div`
+  width: 40%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
+
+export const ContainerProfissionais = styled.div`
+  width: 80%;
+  height: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .ContainerCard {
+    display: flex;
+    width: 30%;
+    height: 95%;
+    flex-direction: column;
+    border: 2px dotted white;
+    border-radius: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .imgProfissionais {
+    width: auto;
+    height: 40%;
+    border: 4px solid white;
+    border-radius: 15px;
+  }
+
+  .titleCardProfissionais {
+  }
+  .subTitleCardProfissionais {
+  }
+  .fullTextCardProfissionais {
+    width: 90%;
+  }
+`;
+
+// ================================================================
+
+// =========================== Section4 ===========================
+export const Section5 = styled.div`
+  height: 40vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
   gap: 24px;
 `;

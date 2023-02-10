@@ -2,15 +2,54 @@ import React from "react";
 import * as S from "./styles";
 import Text from "../components/Text";
 // import logo from "../assets/leadership.png";
+import samuel from "../assets/samuel.jpeg";
+import thalia from "../assets/thalia.jpeg";
+import cleants from "../assets/cleants.jpeg";
+import planos from "../assets/planos.png";
 import logoBlack from "../assets/logoHAblack.png";
 import instagram from "../assets/instagram.png";
 import THEME from "../styles";
-import { BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp, BsPhoneFill } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 
 function Home() {
+  const CustomCardProfissionais = ({ title, subtitle, fullText, img }) => {
+    return (
+      <div className="ContainerCard">
+        <img src={img} alt="imgProfissionais" className="imgProfissionais" />
+        <Text
+          className="titleCardProfissionais"
+          size={THEME.SIZES.large}
+          color={THEME.COLORS.white}
+          align="center"
+          bold
+        >
+          {title.toUpperCase()}
+        </Text>
+
+        <Text
+          className="subTitleCardProfissionais"
+          size={THEME.SIZES.medium}
+          color={THEME.COLORS.primary}
+          align="center"
+        >
+          {subtitle.toUpperCase()}
+        </Text>
+
+        <Text
+          className="fullTextCardProfissionais"
+          size={THEME.SIZES.medium}
+          color={THEME.COLORS.white}
+          align="center"
+        >
+          {fullText.toUpperCase()}
+        </Text>
+      </div>
+    );
+  };
+
   const CustomCard = ({ title, subtitle }) => {
     return (
       <S.Quadros>
@@ -18,7 +57,7 @@ function Home() {
           <Text
             className="titleCard"
             size={THEME.SIZES.large}
-            color={THEME.COLORS.primary}
+            color={THEME.COLORS.white}
             align="center"
             bold
           >
@@ -70,8 +109,9 @@ function Home() {
             <S.ContainerTitlesTopS1 className="ContainerTitlesTopS1">
               <CustomTagA title="INÍCIO" section="inicio" />
               <CustomTagA title="SERVIÇOS" section="servicos" />
-              <CustomTagA title="QUEM SOMOS" section="" />
-              <CustomTagA title="CONTATO" section="" />
+              <CustomTagA title="PLANOS" section="planos" />
+              <CustomTagA title="PROFISSIONAIS" section="profissionais" />
+              <CustomTagA title="CONTATO" section="contato" />
             </S.ContainerTitlesTopS1>
 
             <S.ContainerTitlesTopS1 className="menuMobile">
@@ -104,13 +144,18 @@ function Home() {
                     size={THEME.SIZES.mediumLarge}
                   />
                   <CustomTagA
-                    title="QUEM SOMOS"
+                    title="PLANOS"
                     section=""
                     size={THEME.SIZES.mediumLarge}
                   />
                   <CustomTagA
+                    title="PROFISSIONAIS"
+                    section="profissionais"
+                    size={THEME.SIZES.mediumLarge}
+                  />
+                  <CustomTagA
                     title="CONTATO"
-                    section=""
+                    section="contato"
                     size={THEME.SIZES.mediumLarge}
                   />
                 </div>
@@ -185,31 +230,130 @@ function Home() {
         />
       </S.Section2>
 
-      <S.Section4 id="contato">
-        <Text
-          size={THEME.SIZES.mediumLarge}
-          color={THEME.COLORS.white}
-          align="center"
-          style={{ width: "40%" }}
-        >
-          NOS SIGA NAS REDES SOCIAIS
-        </Text>
+      <S.Section3 id="planos">
+        <img
+          src={planos}
+          alt="planos"
+          style={{ width: "60%", height: "auto" }}
+        />
+      </S.Section3>
+
+      <S.Section4 id="profissionais">
+        <S.ContainerTitleSection04>
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.extraLarge + 18}
+            color={THEME.COLORS.primary}
+            bold
+            align="center"
+          >
+            Conheça os Especialistas
+          </Text>
+          <Text
+            size={THEME.SIZES.large}
+            color={THEME.COLORS.primary}
+            align="center"
+          >
+            Nosso time soma mais de 15 anos de experiência com vasta experiência
+            licitações e Contratos!
+          </Text>
+        </S.ContainerTitleSection04>
+        <S.ContainerProfissionais>
+          <CustomCardProfissionais
+            title="Samuel Rodrigues Maia Aquino"
+            subtitle="Advogado pela OAB/PB"
+            fullText="Bacharel em Direito pela Universidade Federal de Campina Grande - UFCG. Experiência na área de Assessoria e Consultoria em Licitações para empresas de Engenharia; Pós-graduando em Licitações e Contratos Administrativos; Experiência em processos trabalhistas e cíveis."
+            img={samuel}
+          />
+          <CustomCardProfissionais
+            title="Thalia"
+            subtitle="Advogada"
+            fullText="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            img={thalia}
+          />
+          <CustomCardProfissionais
+            title="Antônio Cleantes Rodrigues Neto"
+            subtitle="Advogado pela OAB/MA"
+            fullText="Pós-graduando em Licitações e Contratos Administrativos. Experiência na área de Assessoria e Consultoria em Licitações e Contratos Administrativos; Atuação em processos criminais, previdenciários e cíveis."
+            img={cleants}
+          />
+        </S.ContainerProfissionais>
+      </S.Section4>
+
+      <S.Section5 id="contato">
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
             width: "40%",
             alignItems: "center",
             justifyContent: "space-evenly",
           }}
         >
+          <Text
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.white}
+            align="center"
+            style={{ width: "40%" }}
+          >
+            Entre em contato
+          </Text>
+
+          <Text
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.white}
+            align="center"
+            style={{ width: "40%" }}
+          >
+            <BsPhoneFill size={THEME.SIZES.medium} color={THEME.COLORS.white} />
+            {"  (98) 9 8177-8773"}
+          </Text>
+          <Text
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.white}
+            align="center"
+            style={{ width: "40%" }}
+          >
+            <BsPhoneFill size={THEME.SIZES.medium} color={THEME.COLORS.white} />
+            {"  (98) 9 8177-8773"}
+          </Text>
+          <Text
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.white}
+            align="center"
+            style={{ width: "40%" }}
+          >
+            <BsPhoneFill size={THEME.SIZES.medium} color={THEME.COLORS.white} />
+            {"  (98) 9 8177-8773"}
+          </Text>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            width: "40%",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <Text
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.white}
+            align="center"
+            style={{ width: "40%" }}
+          >
+            NOS SIGA NAS REDES SOCIAIS
+          </Text>
           <img
+            onClick={() => {
+              window.open("https://www.instagram.com/habilitar_assessoria/");
+            }}
             src={instagram}
             alt="instagram"
             style={{ width: 40, height: 40 }}
           />
         </div>
-      </S.Section4>
+      </S.Section5>
     </S.Screen>
   );
 }
