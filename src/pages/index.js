@@ -3,6 +3,7 @@ import * as S from "./styles";
 import Text from "../components/Text";
 // import logo from "../assets/leadership.png";
 import logoBlack from "../assets/logoHAblack.png";
+import instagram from "../assets/instagram.png";
 import THEME from "../styles";
 import { BsWhatsapp } from "react-icons/bs";
 import { FiMenu } from "react-icons/fi";
@@ -177,26 +178,52 @@ function Home() {
             </S.ContainerTitlesBottomS1>
           </S.BottomS1>
         </S.Section1>
-
-        <S.Section2 id="servicos">
-          <CustomCard
-            title="Análise de edital e organização de documentos"
-            subtitle="Analisamos o seu edital e organizamos todo o lastro documental para que você tenha êxito em certames licitatórios."
-          />
-          <CustomCard
-            title="Assessoria durante o processo licitatório"
-            subtitle="Realizamos todos os atos necessários para que sua empresa obtenha êxito na competição licitatória, proporcionando um atendimento especializado desde o ato cadastral até eventual interposição de recursos."
-          />
-          <CustomCard
-            title="Assessoria em contratos administrativos"
-            subtitle="Analisamos o contrato administrativo celebrado com o órgão contratante, propiciando todo um acompanhamento especializado durante a sua execução para que sejam garantidos aos nossos clientes todos os direitos pertinentes da relação contratual."
-          />
-          <CustomCard
-            title="Defesa administrativa no âmbito licitatório"
-            subtitle="Elaboramos peças defensivas contra sanções administrativas por meio do nosso competente corpo jurídico, garantindo aos nossos clientes uma defesa efetiva e que busque o respeito aos princípios que regem todo o processo administrativo."
-          />
-        </S.Section2>
       </S.Background>
+
+      <S.Section2 id="servicos">
+        <CustomCard
+          title="Análise de edital e organização de documentos"
+          subtitle="Analisamos o seu edital e organizamos todo o lastro documental para que você tenha êxito em certames licitatórios."
+        />
+        <CustomCard
+          title="Assessoria durante o processo licitatório"
+          subtitle="Realizamos todos os atos necessários para que sua empresa obtenha êxito na competição licitatória, proporcionando um atendimento especializado desde o ato cadastral até eventual interposição de recursos."
+        />
+        <CustomCard
+          title="Assessoria em contratos administrativos"
+          subtitle="Analisamos o contrato administrativo celebrado com o órgão contratante, propiciando todo um acompanhamento especializado durante a sua execução para que sejam garantidos aos nossos clientes todos os direitos pertinentes da relação contratual."
+        />
+        <CustomCard
+          title="Defesa administrativa no âmbito licitatório"
+          subtitle="Elaboramos peças defensivas contra sanções administrativas por meio do nosso competente corpo jurídico, garantindo aos nossos clientes uma defesa efetiva e que busque o respeito aos princípios que regem todo o processo administrativo."
+        />
+      </S.Section2>
+
+      <S.Section4 id="contato">
+        <Text
+          size={THEME.SIZES.mediuLarge}
+          color={THEME.COLORS.white}
+          align="center"
+          style={{ width: "40%" }}
+        >
+          NOS SIGA NAS REDES SOCIAIS
+        </Text>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            width: "40%",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <img
+            src={instagram}
+            alt="instagram"
+            style={{ width: 40, height: 40 }}
+          />
+        </div>
+      </S.Section4>
     </S.Screen>
   );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import THEME from "../styles";
-// import H from "../assets/logoH.PNG";
+import waves from "../assets/svg.png";
 
 export const Screen = styled.div`
   width: 100vw;
@@ -198,3 +198,19 @@ export const Quadros = styled.div`
 `;
 
 // ================================================================
+
+// =========================== Section4 ===========================
+export const Section4 = styled.div`
+  height: 35vh;
+  background-image: url(${waves});
+  /* background-attachment: fixed; */
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+`;
