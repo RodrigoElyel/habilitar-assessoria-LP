@@ -8,8 +8,12 @@ import cleants from "../assets/cleants.jpeg";
 import planos from "../assets/planos.png";
 import logoBlack from "../assets/logoHAblack.png";
 import instagram from "../assets/instagram.png";
+import twitter from "../assets/twitter.png";
+import tiktok from "../assets/tiktok.png";
 import THEME from "../styles";
-import { BsWhatsapp, BsPhoneFill } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
+import { BiPhoneCall } from "react-icons/bi";
+import { HiOutlineMail } from "react-icons/hi";
 import { FiMenu } from "react-icons/fi";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
@@ -171,15 +175,16 @@ function Home() {
                 bold
                 align="center"
               >
-                Advogados Especialistas em Licitações e Contratos
+                EQUIPE JURÍDICA COM EXPERIÊNCIA NA ÁREA DE LICITAÇÕES E
+                CONTRATOS ADMNISTRATIVOS
               </Text>
               <Text
                 size={THEME.SIZES.large}
                 color={THEME.COLORS.white}
                 align="center"
               >
-                Há mais de 15 anos atuando em defesas das empresas para garantir
-                a contratação com o Poder Público.
+                Fazemos com que pequenas, médias e grandes empresas forneçam
+                seus serviços para o governo.
               </Text>
 
               <S.ButtonBottomS1
@@ -199,6 +204,7 @@ function Home() {
                   Fale agora com o Especialista
                 </Text>
               </S.ButtonBottomS1>
+
               <Text
                 size={THEME.SIZES.mediumLarge}
                 color={THEME.COLORS.white}
@@ -228,20 +234,122 @@ function Home() {
           title="Defesa administrativa no âmbito licitatório"
           subtitle="Elaboramos peças defensivas contra sanções administrativas por meio do nosso competente corpo jurídico, garantindo aos nossos clientes uma defesa efetiva e que busque o respeito aos princípios que regem todo o processo administrativo."
         />
+        <Popup
+          trigger={
+            <S.ButtonPopUp>
+              <Text
+                size={THEME.SIZES.mediumLarge}
+                color={THEME.COLORS.white}
+                align="center"
+              >
+                Outros serviços
+              </Text>
+            </S.ButtonPopUp>
+          }
+          contentStyle={{
+            display: "flex",
+            width: 400,
+            height: 400,
+            borderRadius: 25,
+            flexDirection: "column",
+            // alignItems: "center",
+            justifyContent: "center",
+            backgroundColor: THEME.COLORS.white,
+          }}
+          modal
+          nested
+        >
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.primary}
+            bold
+            align="center"
+          >
+            Você precisa de advogado?
+          </Text>
+
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.primary}
+            align="center"
+          >
+            Atuamos nas áreas:
+          </Text>
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.primary}
+            align="left"
+          >
+            {"▪️Trabalhista"}
+          </Text>
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.primary}
+            align="left"
+          >
+            {"▪️Previdenciária"}
+          </Text>
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.primary}
+            align="left"
+          >
+            {"▪️Tributária"}
+          </Text>
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.primary}
+            align="left"
+          >
+            {"▪️Criminal"}
+          </Text>
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.primary}
+            align="left"
+          >
+            {"▪️Cível"}
+          </Text>
+          <Text
+            className="titleTop"
+            size={THEME.SIZES.mediumLarge}
+            color={THEME.COLORS.primary}
+            bold
+            align="center"
+          >
+            📞 Entre em contato com nosso corpo jurídico de advogados.
+          </Text>
+          <S.ButtonInsidePopUp
+            onClick={() => {
+              window.open("https://wa.me/5598983477748");
+            }}
+          >
+            <Text
+              size={THEME.SIZES.mediumLarge}
+              color={THEME.COLORS.black}
+              align="center"
+            >
+              Whatsapp
+            </Text>
+          </S.ButtonInsidePopUp>
+        </Popup>
       </S.Section2>
 
       <S.Section3 id="planos">
-        <img
-          src={planos}
-          alt="planos"
-          style={{ width: "60%", height: "auto" }}
-        />
+        <img className="imgPlanos" src={planos} alt="planos" />
       </S.Section3>
 
       <S.Section4 id="profissionais">
         <S.ContainerTitleSection04>
           <Text
-            className="titleTop"
+            className="titleTopProfisionais"
             size={THEME.SIZES.extraLarge + 18}
             color={THEME.COLORS.primary}
             bold
@@ -258,21 +366,22 @@ function Home() {
             licitações e Contratos!
           </Text>
         </S.ContainerTitleSection04>
+
         <S.ContainerProfissionais>
           <CustomCardProfissionais
-            title="Samuel Rodrigues Maia Aquino"
+            title="Samuel Rodrigues"
             subtitle="Advogado pela OAB/PB"
             fullText="Bacharel em Direito pela Universidade Federal de Campina Grande - UFCG. Experiência na área de Assessoria e Consultoria em Licitações para empresas de Engenharia; Pós-graduando em Licitações e Contratos Administrativos; Experiência em processos trabalhistas e cíveis."
             img={samuel}
           />
           <CustomCardProfissionais
-            title="Thalia"
-            subtitle="Advogada"
-            fullText="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+            title="Thalia Gomes"
+            subtitle="Jornalista"
+            fullText="Bacharel em Jornalismo pela Universidade Ceuma. Experiência no Setor Público, Assessoria Parlamentar e para prefeituras; Gestão de redes Sociais; Marketing Digital com experiência na área de publicidade; Experiência na TV e Rádio."
             img={thalia}
           />
           <CustomCardProfissionais
-            title="Antônio Cleantes Rodrigues Neto"
+            title="Antônio Cleantes"
             subtitle="Advogado pela OAB/MA"
             fullText="Pós-graduando em Licitações e Contratos Administrativos. Experiência na área de Assessoria e Consultoria em Licitações e Contratos Administrativos; Atuação em processos criminais, previdenciários e cíveis."
             img={cleants}
@@ -281,78 +390,76 @@ function Home() {
       </S.Section4>
 
       <S.Section5 id="contato">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "40%",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-          }}
-        >
-          <Text
-            size={THEME.SIZES.mediumLarge}
-            color={THEME.COLORS.white}
-            align="center"
-            style={{ width: "40%" }}
-          >
-            Entre em contato
+        <S.ContainerInfo>
+          <Text size={THEME.SIZES.mediumLarge} color={THEME.COLORS.white}>
+            {"Entre em contato"}
           </Text>
 
-          <Text
-            size={THEME.SIZES.mediumLarge}
-            color={THEME.COLORS.white}
-            align="center"
-            style={{ width: "40%" }}
-          >
-            <BsPhoneFill size={THEME.SIZES.medium} color={THEME.COLORS.white} />
-            {"  (98) 9 8177-8773"}
+          <S.IconAndTitle>
+            <BiPhoneCall size={THEME.SIZES.large} color={THEME.COLORS.white} />
+            <Text
+              size={THEME.SIZES.mediumLarge}
+              color={THEME.COLORS.white}
+              align="center"
+            >
+              {": (98) 9 8177-8773"}
+            </Text>
+          </S.IconAndTitle>
+
+          <S.IconAndTitle>
+            <HiOutlineMail
+              size={THEME.SIZES.large}
+              color={THEME.COLORS.white}
+            />
+            <Text
+              size={THEME.SIZES.mediumLarge}
+              color={THEME.COLORS.white}
+              align="center"
+            >
+              {": contatohabilitar@gmail.com"}
+            </Text>
+          </S.IconAndTitle>
+        </S.ContainerInfo>
+
+        <S.ContainerSocial>
+          <Text size={THEME.SIZES.mediumLarge} color={THEME.COLORS.white}>
+            {"NOS SIGA NAS REDES SOCIAIS"}
           </Text>
-          <Text
-            size={THEME.SIZES.mediumLarge}
-            color={THEME.COLORS.white}
-            align="center"
-            style={{ width: "40%" }}
-          >
-            <BsPhoneFill size={THEME.SIZES.medium} color={THEME.COLORS.white} />
-            {"  (98) 9 8177-8773"}
-          </Text>
-          <Text
-            size={THEME.SIZES.mediumLarge}
-            color={THEME.COLORS.white}
-            align="center"
-            style={{ width: "40%" }}
-          >
-            <BsPhoneFill size={THEME.SIZES.medium} color={THEME.COLORS.white} />
-            {"  (98) 9 8177-8773"}
-          </Text>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "40%",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-          }}
-        >
-          <Text
-            size={THEME.SIZES.mediumLarge}
-            color={THEME.COLORS.white}
-            align="center"
-            style={{ width: "40%" }}
-          >
-            NOS SIGA NAS REDES SOCIAIS
-          </Text>
-          <img
-            onClick={() => {
-              window.open("https://www.instagram.com/habilitar_assessoria/");
-            }}
-            src={instagram}
-            alt="instagram"
-            style={{ width: 40, height: 40 }}
-          />
-        </div>
+
+          <S.IconAndTitle className="social">
+            <img
+              onClick={() => {
+                window.open("https://www.instagram.com/habilitar_assessoria");
+              }}
+              src={instagram}
+              alt="instagram"
+              style={{ width: 40, height: 40 }}
+            />
+            <img
+              onClick={() => {
+                window.open("https://twitter.com/Habilitarlicita");
+              }}
+              src={twitter}
+              alt="twitter"
+              style={{ width: 40, height: 40 }}
+            />
+            <img
+              onClick={() => {
+                window.open(
+                  "https://www.tiktok.com/@habilitar_assessoria?lang=pt-BR"
+                );
+              }}
+              src={tiktok}
+              alt="twitter"
+              style={{
+                width: 40,
+                height: 40,
+                border: "1px solid black",
+                borderRadius: 50,
+              }}
+            />
+          </S.IconAndTitle>
+        </S.ContainerSocial>
       </S.Section5>
     </S.Screen>
   );

@@ -147,18 +147,63 @@ export const Section2 = styled.div`
   justify-content: space-evenly;
   padding: 48px;
   background-color: ${THEME.COLORS.black};
-  background-image: radial-gradient(
-      at 47% 33%,
-      hsl(0, 0%, 0%) 0,
-      transparent 59%
-    ),
-    radial-gradient(at 82% 65%, hsl(198, 0%, 0%) 0, transparent 55%);
+
+  .modal {
+    background-color: ${THEME.COLORS.error};
+  }
 
   @media (max-width: 1000px) {
     width: 80%;
     height: 180vh;
     flex-direction: column;
     flex-wrap: nowrap;
+  }
+`;
+
+export const ButtonPopUp = styled.button`
+  display: flex;
+  width: 30%;
+  height: 80px;
+  align-self: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 1s;
+  background-color: ${THEME.COLORS.primary};
+
+  :hover {
+    background-color: transparent;
+    border: 2px solid ${THEME.COLORS.secondary};
+  }
+  @media (max-width: 1000px) {
+    width: 80%;
+  }
+`;
+
+export const ButtonInsidePopUp = styled.button`
+  display: flex;
+  width: 80%;
+  height: 40px;
+  margin-top: 12px;
+  align-self: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 1s;
+  background-color: ${THEME.COLORS.success};
+
+  :hover {
+    background-color: transparent;
+    border: 2px solid ${THEME.COLORS.success};
+  }
+  @media (max-width: 1000px) {
+    width: 80%;
   }
 `;
 
@@ -240,6 +285,20 @@ export const Section3 = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+
+  @media (max-width: 1000px) {
+    height: 50vh;
+  }
+
+  .imgPlanos {
+    width: 60%;
+    height: auto;
+
+    @media (max-width: 1000px) {
+      width: 80%;
+      height: auto;
+    }
+  }
 `;
 
 // ================================================================
@@ -254,6 +313,10 @@ export const Section4 = styled.div`
   justify-content: space-between;
   gap: 24px;
   background-color: ${THEME.COLORS.black};
+
+  @media (max-width: 1000px) {
+    height: 350vh;
+  }
 `;
 
 export const ContainerTitleSection04 = styled.div`
@@ -262,6 +325,14 @@ export const ContainerTitleSection04 = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+
+  @media (max-width: 1000px) {
+    width: 85%;
+    height: 20%;
+    .titleTopProfisionais {
+      font-size: ${THEME.SIZES.large}px;
+    }
+  }
 `;
 
 export const ContainerProfissionais = styled.div`
@@ -269,7 +340,16 @@ export const ContainerProfissionais = styled.div`
   height: 70%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    justify-content: flex-start;
+    gap: 50px;
+  }
 
   .ContainerCard {
     display: flex;
@@ -281,6 +361,11 @@ export const ContainerProfissionais = styled.div`
     align-items: center;
     justify-content: center;
     gap: 24px;
+
+    @media (max-width: 1000px) {
+      width: 85%;
+      height: 30%;
+    }
   }
 
   .imgProfissionais {
@@ -288,6 +373,9 @@ export const ContainerProfissionais = styled.div`
     height: 40%;
     border: 4px solid white;
     border-radius: 15px;
+    @media (max-width: 1000px) {
+      height: 30%;
+    }
   }
 
   .titleCardProfissionais {
@@ -309,4 +397,46 @@ export const Section5 = styled.div`
   align-items: center;
   justify-content: space-evenly;
   gap: 24px;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
+export const ContainerInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    align-items: center;
+  }
+
+`;
+
+export const ContainerSocial = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  @media (max-width: 1000px) {
+    width: 100%;
+  }
+
+  .social {
+    width: 80%;
+    justify-content: space-around;
+  }
+`;
+
+export const IconAndTitle = styled.div`
+  display: flex;
+  flex-direction: row;
 `;
