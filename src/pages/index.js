@@ -149,7 +149,7 @@ function Home() {
                   />
                   <CustomTagA
                     title="PLANOS"
-                    section=""
+                    section="planos"
                     size={THEME.SIZES.mediumLarge}
                   />
                   <CustomTagA
@@ -343,6 +343,15 @@ function Home() {
       </S.Section2>
 
       <S.Section3 id="planos">
+        <Text
+          className="titleTopPlanos"
+          size={THEME.SIZES.extraLarge + 18}
+          color={THEME.COLORS.primary}
+          bold
+          align="center"
+        >
+          Conheça os nossos planos
+        </Text>
         <img className="imgPlanos" src={planos} alt="planos" />
       </S.Section3>
 
@@ -356,14 +365,6 @@ function Home() {
             align="center"
           >
             Conheça os Especialistas
-          </Text>
-          <Text
-            size={THEME.SIZES.large}
-            color={THEME.COLORS.primary}
-            align="center"
-          >
-            Nosso time soma mais de 15 anos de experiência com vasta experiência
-            licitações e Contratos!
           </Text>
         </S.ContainerTitleSection04>
 

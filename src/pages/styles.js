@@ -145,7 +145,6 @@ export const Section2 = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
-  padding: 48px;
   background-color: ${THEME.COLORS.black};
 
   .modal {
@@ -153,10 +152,9 @@ export const Section2 = styled.div`
   }
 
   @media (max-width: 1000px) {
-    width: 80%;
+    width: 100%;
     height: 180vh;
     flex-direction: column;
-    flex-wrap: nowrap;
   }
 `;
 
@@ -209,10 +207,9 @@ export const ButtonInsidePopUp = styled.button`
 
 export const Quadros = styled.div`
   display: flex;
-  width: 42%;
+  width: 40%;
   height: 30%;
   padding: 16px;
-  /* background-color: ${THEME.COLORS.primary}; */
   border-radius: 50px;
   flex-direction: row;
   align-items: center;
@@ -225,7 +222,7 @@ export const Quadros = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.125);
 
   @media (max-width: 1000px) {
-    width: 85%;
+    width: 70%;
     height: 15%;
     margin: 24px 0px;
   }
@@ -284,15 +281,20 @@ export const Section3 = styled.div`
   background-color: ${THEME.COLORS.black};
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 
   @media (max-width: 1000px) {
     height: 50vh;
+    .titleTopPlanos {
+      font-size: ${THEME.SIZES.large}px;
+    }
   }
 
   .imgPlanos {
-    width: 60%;
+    width: 50%;
     height: auto;
+    align-self: center;
+    /* margin-left: 70px; */
 
     @media (max-width: 1000px) {
       width: 80%;
@@ -415,7 +417,6 @@ export const ContainerInfo = styled.div`
     width: 100%;
     align-items: center;
   }
-
 `;
 
 export const ContainerSocial = styled.div`
